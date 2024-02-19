@@ -53,17 +53,20 @@ GET /api/v1/payment/settlements/school?schoolId=d215b5f8-0249-4dc5-89a3-51fd148c
         {
             "firstName": "Margaret",
             "lastName": "Loother",
-            "fee": 50.00
+            "fee": 50.00,
+            "timeAtSchool": "PT13H29M30S"
         },
         {
             "firstName": "Kendrick",
             "lastName": "Obama",
-            "fee": 50.00
+            "fee": 50.00,
+            "timeAtSchool": "PT4H29M31S"
         },
         {
             "firstName": "Michelle",
             "lastName": "Obama",
-            "fee": 50.00
+            "fee": 50.00,
+            "timeAtSchool": "PT13H29M30S"
         }
     ]
 }
@@ -93,7 +96,8 @@ GET /api/v1/payment/settlements/parent?parentId=d215b5f8-0249-4dc5-89a3-51fd148c
             "fee": 50.00,
             "school": {
                 "name": "High school nr. 1"
-            }
+            },
+            "timeAtSchool": "PT4H29M31S"
         },
         {
             "firstName": "Michelle",
@@ -101,7 +105,8 @@ GET /api/v1/payment/settlements/parent?parentId=d215b5f8-0249-4dc5-89a3-51fd148c
             "fee": 50.00,
             "school": {
                 "name": "High school nr. 1"
-            }
+            },
+            "timeAtSchool": "PT13H29M30S"
         }
     ]
 }
