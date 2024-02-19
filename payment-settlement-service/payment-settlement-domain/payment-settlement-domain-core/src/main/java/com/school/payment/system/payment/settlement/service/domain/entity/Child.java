@@ -55,10 +55,12 @@ public class Child extends BaseEntity<ChildId> {
      */
     private void validateChildAttendancesDayDates() {
         attendances.forEach(childAttendance -> {
-            if (!childAttendance.getEntryDate().toLocalDate()
-                    .equals(childAttendance.getExitDate().toLocalDate())
-                    || childAttendance.getEntryDate()
-                    .isAfter(childAttendance.getExitDate())) {
+            if (!(childAttendance.getEntryDate().toLocalDate()
+                    .equals(childAttendance.getExitDate().toLocalDate()))
+                    || (childAttendance.getEntryDate()
+                        .isAfter(childAttendance.getExitDate())
+                        || childAttendance.getEntryDate()
+                        .isEqual(childAttendance.getExitDate()))) {
                 throw new PaymentSettlementDomainException("There is an error in attendance of child: " +
                         firstName + " " + lastName +
                         ", please contact your system administrator");
