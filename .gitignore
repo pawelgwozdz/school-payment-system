@@ -1,0 +1,8 @@
+# Project exclude paths
+/common/common-application/target/
+/common/common-domain/target/
+/payment-settlement-service/payment-settlement-application/target/
+/payment-settlement-service/payment-settlement-container/target/
+/payment-settlement-service/payment-settlement-dataaccess/target/
+/payment-settlement-service/payment-settlement-domain/payment-settlement-application-service/target/
+/payment-settlement-service/payment-settlement-domain/payment-settlement-domain-core/target/

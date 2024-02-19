@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-application" />
+        <module name="payment-settlement-container" />
+        <module name="payment-settlement-application-service" />
+        <module name="common-domain" />
+        <module name="payment-settlement-domain-core" />
+        <module name="payment-settlement-dataaccess" />
+        <module name="payment-settlement-application" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="" />
+      <module name="common-application" options="-parameters" />
+      <module name="common-domain" options="-parameters" />
+      <module name="payment-settlement-application" options="-parameters" />
+      <module name="payment-settlement-application-service" options="-parameters" />
+      <module name="payment-settlement-container" options="-parameters" />
+      <module name="payment-settlement-dataaccess" options="-parameters" />
+      <module name="payment-settlement-domain" options="-parameters" />
+      <module name="payment-settlement-domain-core" options="-parameters" />
+      <module name="payment-settlement-service" options="" />
+      <module name="school-payment-system" options="" />
+    </option>
+  </component>
+</project>

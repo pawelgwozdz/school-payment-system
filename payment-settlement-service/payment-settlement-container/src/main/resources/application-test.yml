@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+        enable_lazy_load_no_trans: true
+        default_schema: payment_settlement
+        dialect: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:mydb;INIT=CREATE SCHEMA IF NOT EXISTS payment_settlement;
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  sql:
+    init:
+      schema-locations: classpath:init-test-data.sql
