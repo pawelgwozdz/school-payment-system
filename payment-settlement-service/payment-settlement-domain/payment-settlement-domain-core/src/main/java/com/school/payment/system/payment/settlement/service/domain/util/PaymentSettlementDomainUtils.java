@@ -14,15 +14,15 @@ public class PaymentSettlementDomainUtils {
 
     /**
      * returns duration if positive between 2 durations
-     * @param end Time ending duration
-     * @param start Time starting duration
+     * @param start Time ending duration
+     * @param end Time starting duration
      * @return if positive returns duration, if negative returns duration of zero
      */
-    public static Duration getDurationIfPositive(LocalTime end, LocalTime start) {
-        if (end.compareTo(start) > 0) {
+    public static Duration getDurationIfPositive(LocalTime start, LocalTime end) {
+        if (start.compareTo(end) > 0) {
             return Duration.ZERO;
         } else {
-            return Duration.between(end, start);
+            return Duration.between(start, end);
         }
     }
 

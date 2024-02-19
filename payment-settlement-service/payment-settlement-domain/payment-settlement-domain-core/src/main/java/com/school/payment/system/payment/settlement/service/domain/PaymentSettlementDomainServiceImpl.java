@@ -28,7 +28,7 @@ public class PaymentSettlementDomainServiceImpl implements PaymentSettlementDoma
     public void validateAndCalculatePaymentSettlement(PaymentSettlementCapable paymentSettlementCapable) {
         paymentSettlementCapable.validate();
         log.info("{} with id: {} is validated", paymentSettlementCapable.getClass().getSimpleName(), paymentSettlementCapable.getId());
-        paymentSettlementCapable.calculateFee();
+        paymentSettlementCapable.calculateFeeAndTimeAtSchool();
         log.info("Fee for {} with id: {} is calculated", paymentSettlementCapable.getClass().getSimpleName(), paymentSettlementCapable.getId());
     }
 }

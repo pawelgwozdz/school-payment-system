@@ -43,6 +43,14 @@ public class ChildAttendance extends BaseEntity<ChildAttendanceId> {
     }
 
     /**
+     * Calculates duration between entry and exit date
+     * @return Duration between entry and exit date
+     */
+    Duration getTimeAtSchool() {
+        return PaymentSettlementDomainUtils.getDurationIfPositive(entryDate.toLocalTime(), exitDate.toLocalTime());
+    }
+
+    /**
      * calculates fee based on duration of payable hours
      * @param hourPrice school hour price
      * @param duration payable time duration

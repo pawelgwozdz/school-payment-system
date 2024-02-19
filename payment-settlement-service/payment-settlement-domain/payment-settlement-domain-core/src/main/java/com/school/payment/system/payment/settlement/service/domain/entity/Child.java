@@ -5,6 +5,7 @@ import com.school.payment.system.domain.valueobject.ChildId;
 import com.school.payment.system.domain.valueobject.Money;
 import com.school.payment.system.payment.settlement.service.domain.exception.PaymentSettlementDomainException;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
@@ -19,6 +20,7 @@ public class Child extends BaseEntity<ChildId> {
     private School school;
     private final List<ChildAttendance> attendances;
     private Money childFee;
+    private Duration timeAtSchool;
 
     /**
      * Calculate child fee based on attendances
@@ -29,6 +31,15 @@ public class Child extends BaseEntity<ChildId> {
         childFee = attendances.stream()
                 .map(childAttendance -> childAttendance.getFee(hourPrice))
                 .reduce(Money.ZERO, Money::add);
+    }
+
+    /**
+     * Calculates time at school for all child attendances
+     */
+    void calculateTimeAtSchool() {
+        timeAtSchool = attendances.stream()
+                .map(ChildAttendance::getTimeAtSchool)
+                .reduce(Duration.ZERO, Duration::plus);
     }
 
     /**
@@ -147,5 +158,7 @@ public class Child extends BaseEntity<ChildId> {
         this.school = school;
     }
 
-
+    public Duration getTimeAtSchool() {
+        return timeAtSchool;
+    }
 }

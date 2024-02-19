@@ -28,6 +28,7 @@ public class PaymentSettlementDataMapper {
                                 .fee(child.getChildFee().getAmount())
                                 .firstName(child.getFirstName())
                                 .lastName(child.getLastName())
+                                .timeAtSchool(child.getTimeAtSchool())
                                 .school(new School(child.getSchool().getName()))
                                 .build()).collect(Collectors.toList()))
                 .build();
@@ -42,6 +43,7 @@ public class PaymentSettlementDataMapper {
                                 .fee(child.getChildFee().getAmount())
                                 .firstName(child.getFirstName())
                                 .lastName(child.getLastName())
+                                .timeAtSchool(child.getTimeAtSchool())
                                 .build()).collect(Collectors.toList()))
                 .build();
     }

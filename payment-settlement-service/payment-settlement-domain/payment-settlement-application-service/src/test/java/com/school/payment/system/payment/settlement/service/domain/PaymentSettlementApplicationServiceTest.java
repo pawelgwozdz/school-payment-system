@@ -19,6 +19,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
 import java.time.*;
+import java.time.temporal.TemporalAmount;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -93,6 +94,8 @@ class PaymentSettlementApplicationServiceTest {
         assertTrue(child2.isPresent());
         assertEquals(new BigDecimal("30.00"), child1.get().getFee());
         assertEquals(new BigDecimal("20.00"), child2.get().getFee());
+        assertEquals(Duration.ofSeconds(32462), child1.get().getTimeAtSchool());
+        assertEquals(Duration.ofSeconds(18061), child2.get().getTimeAtSchool());
     }
 
     @Test
@@ -142,6 +145,8 @@ class PaymentSettlementApplicationServiceTest {
         assertEquals(new BigDecimal("25.00"), parentPaymentSettlementResponse.getFee());
         assertEquals(new BigDecimal("15.00"), child1.get().getFee());
         assertEquals(new BigDecimal("10.00"), child2.get().getFee());
+        assertEquals(Duration.ofSeconds(32462), child1.get().getTimeAtSchool());
+        assertEquals(Duration.ofSeconds(18061), child2.get().getTimeAtSchool());
     }
 
 

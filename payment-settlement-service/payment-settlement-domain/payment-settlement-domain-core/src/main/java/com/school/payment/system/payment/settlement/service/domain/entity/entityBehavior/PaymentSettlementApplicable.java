@@ -1,6 +1,5 @@
 package com.school.payment.system.payment.settlement.service.domain.entity.entityBehavior;
 
-import com.school.payment.system.domain.valueobject.BaseId;
 import com.school.payment.system.payment.settlement.service.domain.entity.PaymentSettlement;
 
 /**
@@ -8,7 +7,7 @@ import com.school.payment.system.payment.settlement.service.domain.entity.Paymen
  */
 public interface PaymentSettlementApplicable {
 
-    void calculateFee();
+    void calculateFeeAndTimeAtSchool();
 
     void validate();
 

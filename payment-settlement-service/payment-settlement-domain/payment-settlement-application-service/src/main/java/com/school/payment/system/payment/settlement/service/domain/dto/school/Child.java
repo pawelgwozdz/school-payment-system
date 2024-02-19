@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Getter;
 
 import java.math.BigDecimal;
+import java.time.Duration;
 
 /**
  * Dto for child
@@ -24,4 +25,7 @@ public class Child {
 
     @NotNull
     private final BigDecimal fee;
+
+    @NotNull
+    private final Duration timeAtSchool;
 }

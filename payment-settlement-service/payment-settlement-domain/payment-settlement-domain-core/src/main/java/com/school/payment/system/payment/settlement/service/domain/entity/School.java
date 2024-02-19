@@ -27,12 +27,13 @@ public class School extends PaymentSettlementCapable<SchoolId> {
      * Calculates fees for all children attending school
      */
     @Override
-    public void calculateFee() {
+    public void calculateFeeAndTimeAtSchool() {
         children.forEach(child -> child.calculateFee(hourPrice));
         paymentSettlement.setTotalFee(
                 children.stream()
                         .map(Child::getChildFee)
                         .reduce(Money.ZERO, Money::add));
+        children.forEach(Child::calculateTimeAtSchool);
     }
 
     /**

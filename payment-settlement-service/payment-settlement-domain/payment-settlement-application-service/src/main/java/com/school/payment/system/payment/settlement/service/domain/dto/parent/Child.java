@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Getter;
 
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.util.UUID;
 
 /**
@@ -27,4 +28,7 @@ public class Child {
 
     @NotNull
     private final School school;
+
+    @NotNull
+    private final Duration timeAtSchool;
 }

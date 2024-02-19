@@ -27,12 +27,13 @@ public class Parent extends PaymentSettlementCapable<ParentId> {
      * calculates fee for all parent children
      */
     @Override
-    public void calculateFee() {
+    public void calculateFeeAndTimeAtSchool() {
         children.forEach(child -> child.calculateFee(child.getSchool().getHourPrice()));
         paymentSettlement.setTotalFee(
                 children.stream()
                         .map(Child::getChildFee)
                         .reduce(Money.ZERO, Money::add));
+        children.forEach(Child::calculateTimeAtSchool);
     }
 
     /**
