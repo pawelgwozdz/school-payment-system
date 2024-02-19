@@ -28,6 +28,9 @@ The School Payment System focuses on retrieving payment settlements for schools 
     - `org.postgresql:postgresql` (Enables connecting to Postgresql)
     - `org.springframework.boot:spring-boot-starter-web` (Allows creation of REST controllers)
 
+## API Documentation
+
+Access the API documentation using Swagger UI at [http://localhost:8080/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/).
 ## Endpoints
 
 ### /api/v1/payment/settlements/school
