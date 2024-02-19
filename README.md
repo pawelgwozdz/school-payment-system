@@ -16,7 +16,7 @@ The School Payment System focuses on retrieving payment settlements for schools 
     - `com.school.payment.system:payment-settlement-application-service` (Handles input ports and application logic, also contains unit tests)
     - `com.school.payment.system:payment-settlement-application` (Handles controllers and input port implementations for connecting to app)
     - `com.school.payment.system:payment-settlement-dataaccess` (Handles data access to database)
-    - `com.school.payment.system:payment-settlement-container` (Runs Spring app and creates required configs and beans)
+    - `com.school.payment.system:payment-settlement-container` (Runs Spring app and creates required configs and beans, also contains integration tests)
     - `com.school.payment.system:common-application` (Contains common structures, that can be reusable for other services)
     - `org.springdoc:springdoc-openapi-starter-webmvc-ui` (Swagger for API documentation)
     - `org.projectlombok:lombok` (for reducing boilerplate code)
