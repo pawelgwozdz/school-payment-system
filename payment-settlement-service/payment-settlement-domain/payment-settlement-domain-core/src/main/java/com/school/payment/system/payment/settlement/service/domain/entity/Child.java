@@ -22,6 +22,7 @@ public class Child extends BaseEntity<ChildId> {
 
     /**
      * Calculate child fee based on attendances
+     *
      * @param hourPrice Price per hour for staying over time in school
      */
     void calculateFee(Money hourPrice) {
@@ -44,7 +45,9 @@ public class Child extends BaseEntity<ChildId> {
     private void validateChildAttendancesDayDates() {
         attendances.forEach(childAttendance -> {
             if (!childAttendance.getEntryDate().toLocalDate()
-                    .equals(childAttendance.getExitDate().toLocalDate())) {
+                    .equals(childAttendance.getExitDate().toLocalDate())
+                    || childAttendance.getEntryDate()
+                    .isAfter(childAttendance.getExitDate())) {
                 throw new PaymentSettlementDomainException("There is an error in attendance of child: " +
                         firstName + " " + lastName +
                         ", please contact your system administrator");
