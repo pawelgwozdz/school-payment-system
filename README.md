@@ -47,22 +47,26 @@ GET /api/v1/payment/settlements/school?schoolId=d215b5f8-0249-4dc5-89a3-51fd148c
 
 ```json
 {
+    "id": "d215b5f8-0249-4dc5-89a3-51fd148cfb21",
     "schoolName": "High school nr. 1",
     "fee": 150.00,
     "children": [
         {
+            "id": "d215b5f8-0249-4dc5-89a3-51fd148cfb31",
             "firstName": "Margaret",
             "lastName": "Loother",
             "fee": 50.00,
             "timeAtSchool": "PT13H29M30S"
         },
         {
+            "id": "d215b5f8-0249-4dc5-89a3-51fd148cfb28",
             "firstName": "Kendrick",
             "lastName": "Obama",
             "fee": 50.00,
             "timeAtSchool": "PT4H29M31S"
         },
         {
+            "id": "d215b5f8-0249-4dc5-89a3-51fd148cfb27",
             "firstName": "Michelle",
             "lastName": "Obama",
             "fee": 50.00,
@@ -86,24 +90,29 @@ GET /api/v1/payment/settlements/parent?parentId=d215b5f8-0249-4dc5-89a3-51fd148c
 
 ```json
 {
+    "id": "d215b5f8-0249-4dc5-89a3-51fd148cfb26",
     "firstName": "Barack",
     "lastName": "Obama",
     "fee": 100.00,
     "children": [
         {
+            "id": "d215b5f8-0249-4dc5-89a3-51fd148cfb28",
             "firstName": "Kendrick",
             "lastName": "Obama",
             "fee": 50.00,
             "school": {
+                "id": "d215b5f8-0249-4dc5-89a3-51fd148cfb21",
                 "name": "High school nr. 1"
             },
             "timeAtSchool": "PT4H29M31S"
         },
         {
+            "id": "d215b5f8-0249-4dc5-89a3-51fd148cfb27",
             "firstName": "Michelle",
             "lastName": "Obama",
             "fee": 50.00,
             "school": {
+                "id": "d215b5f8-0249-4dc5-89a3-51fd148cfb21",
                 "name": "High school nr. 1"
             },
             "timeAtSchool": "PT13H29M30S"
