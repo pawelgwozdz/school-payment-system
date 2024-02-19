@@ -18,6 +18,9 @@ import java.util.UUID;
 public class Child {
 
     @NotNull
+    private final UUID id;
+
+    @NotNull
     private final String firstName;
 
     @NotNull

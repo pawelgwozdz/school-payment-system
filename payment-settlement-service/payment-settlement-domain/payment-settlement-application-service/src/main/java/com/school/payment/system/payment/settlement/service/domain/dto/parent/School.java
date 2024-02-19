@@ -14,8 +14,12 @@ import java.util.UUID;
 public class School {
 
     private School() {
-        name = "";
+        name = null;
+        id = null;
     }
+
+    @NotNull
+    private final UUID id;
 
     @NotNull
     private final String name;

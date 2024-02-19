@@ -19,6 +19,9 @@ import java.util.UUID;
 public class ParentPaymentSettlementResponse {
 
     @NotNull
+    private final UUID id;
+
+    @NotNull
     private final String firstName;
 
     @NotNull

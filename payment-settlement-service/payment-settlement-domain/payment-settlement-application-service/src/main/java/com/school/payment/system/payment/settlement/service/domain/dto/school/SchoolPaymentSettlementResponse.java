@@ -19,6 +19,9 @@ import java.util.UUID;
 public class SchoolPaymentSettlementResponse {
 
     @NotNull
+    private final UUID id;
+
+    @NotNull
     private final String schoolName;
 
     @NotNull

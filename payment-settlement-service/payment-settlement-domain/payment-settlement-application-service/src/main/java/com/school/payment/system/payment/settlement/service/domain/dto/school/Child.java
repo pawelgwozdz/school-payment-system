@@ -8,6 +8,7 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.Duration;
+import java.util.UUID;
 
 /**
  * Dto for child
@@ -16,6 +17,9 @@ import java.time.Duration;
 @Builder
 @AllArgsConstructor
 public class Child {
+
+    @NotNull
+    private final UUID id;
 
     @NotNull
     private final String firstName;
