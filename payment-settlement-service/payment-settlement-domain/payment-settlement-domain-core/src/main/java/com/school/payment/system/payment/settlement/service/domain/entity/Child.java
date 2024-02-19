@@ -57,10 +57,8 @@ public class Child extends BaseEntity<ChildId> {
         attendances.forEach(childAttendance -> {
             if (!(childAttendance.getEntryDate().toLocalDate()
                     .equals(childAttendance.getExitDate().toLocalDate()))
-                    || (childAttendance.getEntryDate()
-                        .isAfter(childAttendance.getExitDate())
-                        || childAttendance.getEntryDate()
-                        .isEqual(childAttendance.getExitDate()))) {
+                    || !childAttendance.getExitDate()
+                    .isAfter(childAttendance.getEntryDate())) {
                 throw new PaymentSettlementDomainException("There is an error in attendance of child: " +
                         firstName + " " + lastName +
                         ", please contact your system administrator");
